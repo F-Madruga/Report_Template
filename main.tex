@@ -1,0 +1,62 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{biblatex}
+\usepackage{geometry}
+\usepackage{fontspec}
+\usepackage{tocloft}
+\usepackage{indentfirst}
+\graphicspath{ {./img/} }
+\usepackage{titlesec}
+
+% DEFINIR ESPAÇO ENTRE LINHAS
+\renewcommand{\baselinestretch}{1.5}
+
+% DEFINIR FONTE
+\setmainfont{Times New Roman}[
+  SizeFeatures={Size=12},
+]
+
+% DEFINIR ESPAÇO DOS PARÁGRAFOS
+\setlength{\parskip}{0.5em}
+
+% DEFINIR MÉDIA
+\geometry{
+ a4paper,
+}
+
+% IMPORTAR FICHEIRO DE BIBLIOGRAFIA
+\addbibresource{references.bib}
+
+\begin{document}
+
+% CAPA DO RELATÓRIO NO FICHEIRO titlepage.tex
+\input{titlepage}
+
+\pagebreak
+
+% TABELA DE CONTEÚDO
+\renewcommand*\contentsname{Tabela de conteúdos}
+\renewcommand\cftsecafterpnum{\vskip6pt}
+\renewcommand\cftsubsecafterpnum{\vskip6pt}
+\renewcommand{\cftsecfont}{\normalfont}
+\renewcommand{\cftsubsecfont}{\normalfont}
+\renewcommand{\cftsecpagefont}{\normalfont}
+\renewcommand{\cftsubsecpagefont}{\normalfont}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\tableofcontents
+\thispagestyle{empty}
+
+\pagebreak
+\setcounter{page}{1}
+
+\section{Introdução}
+
+\pagebreak
+
+% BIBLIOGRAFIA
+\nocite{*}
+\printbibliography[heading=bibintoc,title={Referências}]
+
+\end{document}

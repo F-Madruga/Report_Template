@@ -1,0 +1,14 @@
+################ EXAMPLO DE IMAGEM ################
+\vspace{0.5cm}
+\begin{figure}[h]
+\includegraphics[scale=0.25]{Agent_Comunication.png}
+\centering
+\caption{Comunicação entre agentes}
+\label{fig:agent_comunication}
+\end{figure}
+
+################# REFERIR IMAGEM ##################
+\ref{fig:agent_comunication}
+
+############## REFERIR BIBLIOGRAFIA ###############
+\cite{Actor_Model_1}
